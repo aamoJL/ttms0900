@@ -6,7 +6,11 @@ https://www.fluidui.com/editor/live/preview/p_0BPSzFuHCsna36F3EZc74nrWcarUWENU.1
 
 HTML-malli 1: https://aamojl.github.io/
 
-playertest.html
-- asdasd
-- asdasd
- - asdasd
+- playertest.html
+ - https://aamojl.github.io/playertest
+ - javascriptit soittimen nappeihin, äänislideriin
+ - videonvaihto scripti
+ 
+- layout-malli
+ - https://aamojl.github.io/
+ - https://github.com/aamoJL/aamoJL.github.io github
