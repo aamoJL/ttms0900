@@ -25,7 +25,7 @@ Suunnitelma (lisäpisteitä ttms0900):
  - https://www.fluidui.com/editor/live/preview/p_0BPSzFuHCsna36F3EZc74nrWcarUWENU.1477322647597
 - Käytettävät tietovarastot, kielet, kirjastot jne...
  - 0500
-  - HTML5
+    - HTML5
   - CSS
   - javascript
   - JQuery
