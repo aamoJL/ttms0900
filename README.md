@@ -14,7 +14,8 @@ Suunnitelma (lisäpisteitä ttms0900):
 - parityö
 - Aihe
  - Videosoittolista, johon voi lisätä kuka vain uusia videoita 
- - admin voi poistaa ja skipata videoita sivustolla myös blogi, jossa posteja kehityksestä 
+ - admin voi poistaa ja skipata videoita 
+ - sivustolla myös blogi, jossa posteja kehityksestä 
  - kirjautuminen admineille
 - Keskeiset tominnot:
  - YouTube-soitin
