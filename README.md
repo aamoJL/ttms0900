@@ -26,15 +26,15 @@ Suunnitelma (lisäpisteitä ttms0900):
 - Käytettävät tietovarastot, kielet, kirjastot jne...
  - 0500
     - HTML5
-  - CSS
-  - javascript
-  - JQuery
-  - (Ajax)
+    - CSS
+    - javascript
+    - JQuery
+    - (Ajax)
 
  - 0900
-  - PHP
-  - JSON
-  - SQL
+    - PHP
+    - JSON
+    - SQL
 - Työnjako
  - ?????
 - Aikataulu
