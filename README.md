@@ -36,6 +36,11 @@ Suunnitelma (lisäpisteitä ttms0900):
     - JSON
     - SQL
 - Työnjako
- - ?????
+ - Joni on tehny jo melkee kaiken valmiiks
+ - Jaakko tekee chatin ja loginin
 - Aikataulu
- - ?????
+ - 28.9 Työsuunnitelma
+ - 2.11 UI
+ - 16.11 
+ - 30.11 Seminaari
+ - 7.12 Palautus
