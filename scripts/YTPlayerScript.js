@@ -56,16 +56,13 @@ function playVideo() {
     else {player.pauseVideo();}
 }
 
-function changeVideo() {
-    var id = document.getElementById("change").value;
-    player.loadVideoById(
-        id)
+function changeVideo(id) {
+	console.log(id);
+    player.loadVideoById(id);
 }
 
-function changeVolume() {
-    var volume = document.getElementById("volume").value;
-
-    player.setVolume(volume);
+function changeVolume(value) {
+    player.setVolume(value);
 }
 
 //css
