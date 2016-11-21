@@ -5,37 +5,6 @@
 	<script src="scripts/indexScript.js"></script> <!-- index.php soittolistan nappiscriptit -->
 	<script src="scripts/YTPlayerScript.js"></script> <!-- index.php YouTube-soittimen scriptit -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- jquery -->
-	<script> <!-- näyttää syötetyn videon tiedot -->
-		function getData(videoUrl){
-			var index = videoUrl.indexOf("=");
-			var videoId = videoUrl.substring(index+1, index+12);
-			
-			var source = "https://www.googleapis.com/youtube/v3/videos?part=snippet&id="+videoId+"&key=AIzaSyDFXxQriPkJht3z9x14DZMOIF8ntpOZw7k";
-			$.ajax({
-				type: 'GET',
-				url: source,
-				contentType: "application/json",
-				dataType: 'json',
-				success: function (json) {
-					//alert(json.items[0].snippet.title +" "+ json.items[0].snippet.channelTitle); //title & channel
-					try{
-						document.getElementById("videoTitle").innerHTML = json.items[0].snippet.title;
-						document.getElementById("channelTitle").innerHTML = json.items[0].snippet.channelTitle;
-					}
-					catch(error){
-						document.getElementById("videoTitle").innerHTML = "";
-						document.getElementById("channelTitle").innerHTML = "";
-					}
-				},
-				error: function (e) {
-					alert("error");
-				}
-			});
-		}
-	</script>
-	
-	
-	
 </head>
 
 <body>
@@ -53,7 +22,7 @@
 		<!-- Uuden kappaleen lisäyslomake -->
 			<article>
 				<h1>Lisää kappale</h1>
-				<input type="text" name="song" placeholder="https://www.youtube.com/watch?v=1yhTaFQJukx" onInput="getData(this.value)"><button>>></button>
+				<input type="text" id="videoUrl" name="videoUrl" placeholder="https://www.youtube.com/watch?v=1yhTaFQJukx" onInput="getData(this.value)"><button onclick="addVideo()">>></button>
 				<br><p>Title: <span id=videoTitle name=videoTitle></span></p>
 				<p>Channel: <span id=channelTitle name=channelTitle></span></p>
 			</article>
@@ -70,12 +39,11 @@
 </body>
 
 <?php
-//soittolistan tulostusfunktio
+//soittolistan tulostusfunktio						!vaihda oikea tietokanta!
 function printTable(){
-	$db = new SQLite3('databases/testdb.db'); //tietokanta
+	$db = new SQLite3('databases/testdb.db');
 	
-	$results = $db->prepare('SELECT * FROM Video'); //... WHERE id = :id' //tietokantahaun alustus
-	//$results->bindValue(':id',$id);
+	$results = $db->prepare('SELECT * FROM Video');
 	$result = $results->execute(); //tietokantahaku
 	
 	//soittolistataulukon tulostus
