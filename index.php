@@ -5,6 +5,7 @@
 	<script src="scripts/indexScript.js"></script> <!-- index.php soittolistan nappiscriptit -->
 	<script src="scripts/YTPlayerScript.js"></script> <!-- index.php YouTube-soittimen scriptit -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- jquery -->
+	<script src="scripts/adminScripts.js"></script> <!-- adminin käyttämät scriptit -->
 </head>
 
 <body>
@@ -43,17 +44,16 @@
 function printTable(){
 	$db = new SQLite3('databases/testdb.db');
 	
-	$results = $db->prepare('SELECT * FROM Video');
+	$results = $db->prepare("SELECT * FROM Video WHERE tila='jono';");
 	$result = $results->execute(); //tietokantahaku
 	
 	//soittolistataulukon tulostus
 	while($row = $result->fetchArray()) {
-		echo	"<tr><td><img class='thumbnail' src='https://i.ytimg.com/vi/".$row[3]."/mqdefault.jpg' onclick=changeVideo('".$row[3]."')></td>
-				<td>
-					<ul class='test'>
+		echo	"<tr><td><img class='thumbnail' src='https://i.ytimg.com/vi/".$row[3]."/mqdefault.jpg' onclick=changeVideo('".$row[3]."')><td>
+					<ul>
 						<li><strong>".$row[1]."</strong></li>
 						<li>".$row[2]."</li>
-						<li><i>".$row[4]."</i></li>
+						<li><button onclick=removeVideo('".$row[0]."')>X</button><i>".$row[4]."</i></li>
 					</ul>
 				</td>
 				</tr>";
