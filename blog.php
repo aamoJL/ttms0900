@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="styles/style.css" type="text/css" rel=stylesheet>
-    <script src="scripts/blogScript.js"></script>
+    <script src="scripts/adminScripts.js"></script>
 </head>
 
 <body>
