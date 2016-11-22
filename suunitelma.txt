@@ -1,0 +1,33 @@
+react viestit = tietokantaan uusi merkint‰
+
+Play -> react viesti: "playing: videoID p‰iv‰ys"
+skip -> tietokannasta seuraava video -> react viesti: "playing videoID p‰iv‰ys"
+pause -> react viesti: "paused"
+
+playlist: p‰ivittyy tietokannasta x sekunnin v‰lein
+
+play, skip, pause vain adminilla n‰kyviss‰
+
+sivu latautuu -> tietokannasta uusin viesti
+	-> jos paused: soitin ei pyˆri - Johonkin lukemaan paused ?
+	-> jos playing: lasketaan p‰iv‰yksest‰ aika? / soitetaan video
+	-> p‰ivitet‰‰n soittolistaa
+
+soittimen painaminen mutettaa? pys‰ytt‰‰? avaa videon youtubessa?
+
+todo:
+-admintools (skip vain adminilla)
+-login
+-blog:
+	lis‰‰ uusi
+	n‰yt‰ viestit
+	kommentointi?
+	lis‰‰ kuva
+-dokumentointi
+
+Tehty:
+|-kappaleen lis‰ys tietokantaan
+|-kun lis‰tty, tyhjennys
+|-kursorin vaihto thumbnailiin
+|-soittolistaan delete-nappi
+|-soittolistat (jono/soitetut)
