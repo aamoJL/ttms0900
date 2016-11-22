@@ -1,3 +1,9 @@
+/*
+YouTube-soittimeen ja -videoihin liittyvät scriptit
+*/
+
+
+// index.php - Luodaan YouTube-soitin
 var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
@@ -6,6 +12,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 var player;
 
+// Ladataan video kun soitin on valmis
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
     videoId: 'M7lc1UVf-VE',
@@ -24,23 +31,27 @@ function onYouTubeIframeAPIReady() {
     });
 }
 
+// Vaihtaa volume-liukusäätimen arvon käyttäjän soittimen arvoon
 function setVolume(){
     var volume = player.getVolume();
     document.getElementById("volume").value = volume;
 }
 
+// kun soitin on valmis...
 function onPlayerReady(event) {
 //            event.target.playVideo();
     setVolume();
 }
 
-var done = false;
+//var done = false;
+//Kun soittimen tila muuttuu...
 function onPlayerStateChange(event) {
 //            if (event.data == YT.PlayerState.PLAYING && !done) {
 //                
 //            }
 }
 
+// Hiljentää soittimen
 function muteVideo() {
     if(player.isMuted()){
         player.unMute();
@@ -48,6 +59,7 @@ function muteVideo() {
     else { player.mute();}
 }
 
+// Jos soitin on päällä -> pysäytetään, jos pysäytetty -> päälle
 function playVideo() {
     var state = player.getPlayerState();
     if(state != 1){
@@ -56,16 +68,18 @@ function playVideo() {
     else {player.pauseVideo();}
 }
 
+// Vaihtaa soittimen videon
 function changeVideo(id) {
 	console.log(id);
     player.loadVideoById(id);
 }
 
+// Vaihtaa soittimen äänentason
 function changeVolume(value) {
     player.setVolume(value);
 }
 
-//lähettää lisättävän videon tiedot php:lle            !vaihda oikea php-sivu!
+// Lähettää lisättävän videon tiedot addVideo.php:lle           !vaihda oikea php-sivu!
 function addVideo(){
 	var http = new XMLHttpRequest();
 	var url = "addVideo.php";
@@ -91,12 +105,13 @@ function addVideo(){
 	http.onreadystatechange = function() {
 		if(http.readyState == 4 && http.status == 200) {
 			alert(http.responseText);
+			document.getElementById("videoUrl").value = "";
 		}
 	}
 	http.send(params);
 }
 
-//hakee videon tiedot YouTuben apista
+// Hakee videon tiedot YouTuben apista
 function getData(videoUrl){
 			var index = videoUrl.indexOf("=");
 			var videoId = videoUrl.substring(index+1, index+12);
@@ -123,7 +138,3 @@ function getData(videoUrl){
 				}
 		});
 }
-	
-//css
-//iframe:
-//pointer-events: none;
