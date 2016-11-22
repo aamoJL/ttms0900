@@ -18,3 +18,14 @@ function openList() {
     document.getElementById("playlistButton").onclick = closeList;
     document.getElementById("playlistButton").innerHTML = "Close";
 }
+
+// Päivittää soittolistan 5000ms välein
+$(document).ready(function(){
+      refreshTable();
+    });
+
+function refreshTable(){
+	$('#playlist').load('includes/getPlaylist.php', function(){
+	   setTimeout(refreshTable, 5000);
+	});
+}

@@ -82,7 +82,7 @@ function changeVolume(value) {
 // Lähettää lisättävän videon tiedot addVideo.php:lle           !vaihda oikea php-sivu!
 function addVideo(){
 	var http = new XMLHttpRequest();
-	var url = "addVideo.php";
+	var url = "includes/addVideo.php";
 	var videotitle = encodeURIComponent(document.getElementById("videoTitle").innerHTML);
 	var channeltitle = encodeURIComponent(document.getElementById("channelTitle").innerHTML);
 	
@@ -92,7 +92,13 @@ function addVideo(){
 	var addedBy = "test";
 	
 	if(videotitle == "" || channeltitle == "" || videoid == ""){
-		alert("asd error");
+		//alert("asd error");
+		document.getElementById("message").innerHTML = "error"
+		document.getElementById("videoUrl").value = "";
+			
+			setTimeout(function(){
+				document.getElementById("message").innerHTML = "";
+			},5000);
 		return;
 	}
 	
@@ -104,11 +110,22 @@ function addVideo(){
 
 	http.onreadystatechange = function() {
 		if(http.readyState == 4 && http.status == 200) {
-			alert(http.responseText);
+			//alert(http.responseText);
+			refreshTable();
 			document.getElementById("videoUrl").value = "";
+			
+			document.getElementById("message").innerHTML = "nice."
+			
+			setTimeout(function(){
+				document.getElementById("message").innerHTML = "";
+			},5000);
 		}
 	}
 	http.send(params);
+	
+	document.getElementById("videoTitle").innerHTML = "";
+	document.getElementById("channelTitle").innerHTML = "";
+	
 }
 
 // Hakee videon tiedot YouTuben apista

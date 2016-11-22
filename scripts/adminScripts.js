@@ -14,7 +14,7 @@ function newPost() {
 // index.php, songlist.php - Lähettää poistettavan videon tietokanta-ID:n removeVideo.php:lle
 function removeVideo(id){
 	var http = new XMLHttpRequest();
-	var url = "removeVideo.php";
+	var url = "includes/removeVideo.php";
 	
 	var params = "Id="+id;
 	
@@ -24,7 +24,8 @@ function removeVideo(id){
 
 	http.onreadystatechange = function() {
 		if(http.readyState == 4 && http.status == 200) {
-			alert(http.responseText);
+			refreshTable();
+			//alert(http.responseText);
 		}
 	}
 	http.send(params);
