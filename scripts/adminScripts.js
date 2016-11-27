@@ -2,15 +2,6 @@
 Adminin käytössä olevat scriptit
 */
 
-
-// blog.php - Avaa lomakkeen uudelle blogiviestille
-function newPost() {
-    if(document.getElementById("newPost").style.display == "block"){
-        document.getElementById("newPost").style.display = "none";
-    }
-    else {document.getElementById("newPost").style.display = "block";}
-}
-
 // index.php, songlist.php - Lähettää poistettavan videon tietokanta-ID:n removeVideo.php:lle
 function removeVideo(id){
 	var http = new XMLHttpRequest();
@@ -30,4 +21,60 @@ function removeVideo(id){
 	}
 	http.send(params);
 }
-		
+
+// blog.php - Avaa lomakkeen uudelle blogiviestille
+function newPost() {
+    if(document.getElementById("newPost").style.display == "block"){
+        document.getElementById("newPost").style.display = "none";
+    }
+    else {document.getElementById("newPost").style.display = "block";}
+}
+
+
+// blog.php - Lähettää uuden blogimerkinnän tiedot addBlogpost.php:lle
+function addPost(){
+	var http = new XMLHttpRequest();
+	var url = "includes/addBlogpost.php";
+	var message = encodeURIComponent(document.getElementById("postText").value);
+	var title = encodeURIComponent(document.getElementById("postTitle").value);
+	
+	if(message == "" || title == ""){
+		alert("tyhjia kohtia!");
+		return;
+	}
+	
+	var params = "viesti="+message+"&otsikko="+title;
+	http.open("POST", url, true);
+	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+	http.onreadystatechange = function() {
+		if(http.readyState == 4 && http.status == 200) {
+			//alert(http.responseText);
+			location.reload();
+		}
+	}
+	http.send(params);
+	
+	document.getElementById("postText").innerHTML = "";
+	document.getElementById("postTitle").innerHTML = "";
+}
+
+// blog.php - lähettää poistettavan blogimerkinnän indexin removeBlogpost.php:lle
+function removePost(index){
+	var http = new XMLHttpRequest();
+	var url = "includes/removeBlogpost.php";
+	
+	var params = "index="+index;
+	
+	http.open("POST", url, true);
+
+	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+	http.onreadystatechange = function() {
+		if(http.readyState == 4 && http.status == 200) {
+			//alert(http.responseText);
+			location.reload();
+		}
+	}
+	http.send(params);
+}	

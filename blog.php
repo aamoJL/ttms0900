@@ -2,34 +2,50 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="styles/style.css" type="text/css" rel=stylesheet>
-    <script src="scripts/adminScripts.js"></script>
+    <script src="scripts/adminScripts.js"></script> <!-- adminin scriptit -->
 </head>
 
 <body>
 <?php include_once("includes/nav.html"); ?>
 <main class="blog">
         <button name="new" onclick="newPost()">Uusi</button>
-        <section class="postList">
+        <section id=newBlogPost class="postList">
             <article id="newPost">
-                <textarea name="postText" rows="5" cols="50" placeholder="Teksti tähän..."></textarea><br>
-                <button name="add">Add</button>
+				<input type=text id="postTitle" placeholder=Otsikko></input><br>
+                <textarea id="postText" rows="5" cols="50" placeholder="Teksti tähän..."></textarea><br>
+                <button id="add" onclick="addPost()">Add</button>
             </article>
         </section>
         <section class="postList">
-            <article class="post">
-                <p class="date">6.11.2016</p>
-                <h1 class="blogHeader">POst 1</h1>
-                <p>asdasdasdadasdasda</p>
-                <hr>
-                <p class="footer">aamo</p>
-            </article>
+				<?php
+				//tulostaa jsonista kaikki blogimerkinnät lopusta alkuun
+					try{
+					$data = file_get_contents('databases/blog.json');
+					$posts = json_decode($data, true);
+					$posts = array_reverse($posts);
+					$index = count($posts) - 1;
+					
+					foreach($posts as $post){
+						echo "<article class='post'>
+							<p class='date'>".$post['paivays']."</p>
+							<h1 class='blogHeader'>".$post['otsikko']."</h1>
+							<p>".$post['viesti']."</p>
+							<hr>
+							<p class='footer'>".$post['lahettaja']."</p>
+							<button onclick='removePost(".$index.")'>X</buttton>
+							</article>";
+							$index--;
+						}
+					}
+					catch(Exception $e){
+						echo "json error";
+					}
+				?>
         </section>
     </main>
 <?php include_once("includes/footer.php"); ?>
 </body>
 
 <?php
-function printTable(){
-	//tietokannasta tiedot
-}
+
 ?>
