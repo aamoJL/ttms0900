@@ -8,7 +8,7 @@ Lisää videon tiedot tietokantaan			!muokkaa error viestit!
 
 if(isset($_POST['videoTitle']) && isset($_POST['channelTitle']) && isset($_POST['videoId']) && isset($_POST['addedBy'])){
 	try{
-	$db = new SQLite3('../databases/testdb.db'); //tietokanta
+	$db = new SQLite3('/var/Databases/testdb.db'); //tietokanta
 
 	//jos video on jo jonossa:
 	$videos = $db->prepare("SELECT YTid FROM Video WHERE YTid=:videoid AND tila='jono' LIMIT 1;");

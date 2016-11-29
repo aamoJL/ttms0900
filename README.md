@@ -44,3 +44,5 @@ Suunnitelma (lisäpisteitä ttms0900):
  - 16.11 
  - 30.11 Seminaari
  - 7.12 Palautus
+admin 
+adminadmin
