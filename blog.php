@@ -5,8 +5,9 @@ session_start();
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="styles/style.css" type="text/css" rel=stylesheet>
-    <script src="scripts/adminScripts.js"></script> <!-- adminin scriptit -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- jquery -->
+    
+<script src="scripts/adminScripts.js"></script> <!-- adminin käyttämät scriptit -->
 </head>
 
 <?php
@@ -32,7 +33,7 @@ include_once("includes/blogAdmin.php");
 				<?php
 				//tulostaa jsonista kaikki blogimerkinnät lopusta alkuun
 					try{
-					$data = file_get_contents('databases/blog.json');
+					$data = file_get_contents('/var/Databases/blog.json');
 					$posts = json_decode($data, true);
 					$posts = array_reverse($posts);
 					$index = count($posts) - 1;

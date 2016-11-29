@@ -8,6 +8,7 @@ function removeVideo(id){
 	var url = "includes/removeVideo.php";
 	
 	var params = "Id="+id;
+	//params = params+"Session="+$_SESSION;
 	
 	http.open("POST", url, true);
 
