@@ -1,12 +1,11 @@
 <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- jquery -->
     <link href="styles/style.css" type="text/css" rel=stylesheet>
 </head>
 
 <body>
-<?php include_once("includes/nav.php"); ?>
+<?php include_once("includes/nav.html"); ?>
 <main class="blog">
             <article class="dokumentti">
                 <h1 class="dokumenttiotsikko">Harjoitustyö: Pleblist</h1>

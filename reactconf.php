@@ -5,4 +5,4 @@ error_reporting(E_ALL);
 $site_path = realpath(dirname(__FILE__));
 define ('__SITE_PATH', $site_path);
 
-define ('__DBCONFIG_PATH', '/var/react');
+define ('__DBCONFIG_PATH', 'var/react');

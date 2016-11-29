@@ -1,7 +1,7 @@
 # ttms0900
 harjoitustyo ttms0900 0500
 
-v0.7: http://student.labranet.jamk.fi/~H9031/pleblist (youtube playerista painaminen estetty)
+v0.1: http://student.labranet.jamk.fi/~H9031/harj/ (youtube playerista painaminen estetty)
 
 - tietokantana SQLite3
 - includeseissa header, footer
@@ -44,5 +44,3 @@ Suunnitelma (lisäpisteitä ttms0900):
  - 16.11 
  - 30.11 Seminaari
  - 7.12 Palautus
-admin 
-adminadmin

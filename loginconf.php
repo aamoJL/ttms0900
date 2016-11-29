@@ -3,7 +3,7 @@ class Login
 {
 private $db_type = "sqlite"; 
 
-private $db_sqlite_path = "/var/Databases/users.db";
+private $db_sqlite_path = "var/Databases/users.db";
 
 private $db_connection = null;
 
