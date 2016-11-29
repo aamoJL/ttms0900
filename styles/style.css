@@ -351,9 +351,9 @@ img.thumbnailSongList {
 img.imgBlog {
 	width: 100px;
 	height: 100px;
+	margin-right: 10px;
 	float: left;
 	display: inline;
-	margin-right: 20px;
 }
 
 /*    nämä, jos kapea ikkuna*/
