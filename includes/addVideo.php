@@ -11,7 +11,7 @@ if(isset($_POST['videoTitle']) && isset($_POST['channelTitle']) && isset($_POST[
 	$db = new SQLite3('../databases/testdb.db'); //tietokanta
 
 	//jos video on jo jonossa:
-	$videos = $db->prepare("SELECT YTid FROM Video WHERE YTid=:videoid LIMIT 1;");
+	$videos = $db->prepare("SELECT YTid FROM Video WHERE YTid=:videoid AND tila='jono' LIMIT 1;");
 	$videos->bindValue(':videoid',$_POST['videoId']);
 	$video = $videos->execute(); //soitetuthaku
 	$video = $video->fetchArray();
