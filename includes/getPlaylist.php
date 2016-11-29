@@ -15,7 +15,7 @@ echo "<table>";
 
 //soittolistataulukon tulostus
 while($row = $result->fetchArray()) {
-	echo	"<tr><td><img class='thumbnail' src='https://i.ytimg.com/vi/".$row[3]."/mqdefault.jpg' onclick=changeVideo('".$row[3]."')><td>
+	echo	"<tr><td><img class='thumbnail' src='https://i.ytimg.com/vi/".$row[3]."/mqdefault.jpg' onclick=adminChangeVideo('".$row[3]."')><td>
 				<ul>
 					<li><strong>".$row[1]."</strong></li>
 					<li>".$row[2]."</li>

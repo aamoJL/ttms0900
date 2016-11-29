@@ -111,14 +111,25 @@ function addVideo(){
 	http.onreadystatechange = function() {
 		if(http.readyState == 4 && http.status == 200) {
 			//alert(http.responseText);
-			refreshTable();
 			document.getElementById("videoUrl").value = "";
-			
-			document.getElementById("message").innerHTML = "nice."
-			
-			setTimeout(function(){
+			if(http.responseText == 'listalla'){
+				document.getElementById("message").innerHTML = "video on jo listalla"
+				setTimeout(function(){
 				document.getElementById("message").innerHTML = "";
-			},5000);
+				},5000);
+			}
+			else{
+				refreshTable();
+				document.getElementById("message").innerHTML = "nice."
+				setTimeout(function(){
+				document.getElementById("message").innerHTML = "";
+				},5000);
+			}
+			
+			
+			
+			
+			
 		}
 	}
 	http.send(params);

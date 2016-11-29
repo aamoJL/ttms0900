@@ -18,7 +18,7 @@
 			</div>
 		<!-- YouTube-soittimen napit -->
 			<article id=playerButtons>
-				<button class="playerButton" id="play" onclick="playVideo()">Play</button><button class="playerButton" id="skip" onclick="skipVideo()">Skip</button><button class="playerButton" id="mute" onclick="muteVideo()">Mute</button><input id="volume" type=range min="0" max="100" value=100 oninput="changeVolume(this.value)">
+				<button class="playerButton" id="play" onclick="playVideo()">Play</button><button class="playerButton" id="skip" onclick="adminChangeVideo('skip')">Skip</button><button class="playerButton" id="mute" onclick="muteVideo()">Mute</button><input id="volume" type=range min="0" max="100" value=100 oninput="changeVolume(this.value)">
 			</article>
 		<!-- Uuden kappaleen lisäyslomake -->
 			<article>

@@ -77,4 +77,36 @@ function removePost(index){
 		}
 	}
 	http.send(params);
-}	
+}
+
+// index.php - Adminin videon vaihto scripti
+function adminChangeVideo(id) {
+	var http = new XMLHttpRequest();
+	var url = "includes/changeVideo.php";
+	var next = "play";
+	
+	if(id == 'skip'){next = 'skip';} //jos skipataan
+	
+	var params = "next="+next+"&videoid="+id;
+	
+	http.open("POST", url, true);
+
+	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+	http.onreadystatechange = function() {
+		if(http.readyState == 4 && http.status == 200) {
+			if(http.responseText == ""){
+				alert("videon vaihto error");
+			}
+			else{
+				changeVideo(http.responseText);
+				//alert(http.responseText);
+			}
+		}
+	}
+	http.send(params);
+}
+	
+
+
+

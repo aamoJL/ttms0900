@@ -8,7 +8,7 @@ Tulostaa Soitetut-listan			!muokkaa error viestit!
 try{
 	$db = new SQLite3('../databases/testdb.db'); //tietokanta
 	
-	$results = $db->prepare("SELECT nimi,kanava,YTid,lisaaja,soitettu FROM Video WHERE tila='soitettu';");
+	$results = $db->prepare("SELECT nimi,kanava,YTid,lisaaja,soitettu FROM Video WHERE tila='soitettu' ORDER BY Id DESC;");
 	$result = $results->execute(); //soitetuthaku
 	
 	$countSql = $db->prepare("SELECT count(*) FROM Video WHERE tila='soitettu';");
