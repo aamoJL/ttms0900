@@ -86,6 +86,7 @@ function adminChangeVideo(id) {
 	var next = "play";
 	
 	if(id == 'skip'){next = 'skip';} //jos skipataan
+	//else if(id == 'paused'){next = 'paused';}
 	
 	var params = "next="+next+"&videoid="+id;
 	
@@ -98,15 +99,16 @@ function adminChangeVideo(id) {
 			if(http.responseText == ""){
 				alert("videon vaihto error");
 			}
+			else if(http.responseText == "paused"){
+				video = 'paused';
+			}
 			else{
 				changeVideo(http.responseText);
+				video = http.responseText;
 				//alert(http.responseText);
 			}
 		}
 	}
 	http.send(params);
 }
-	
-
-
 

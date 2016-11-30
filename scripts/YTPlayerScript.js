@@ -18,7 +18,7 @@ function onYouTubeIframeAPIReady() {
     videoId: 'M7lc1UVf-VE',
     events: {
         'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
+        //'onStateChange': onPlayerStateChange
         },
     playerVars: {
         autoplay: 0,    //autoplay
@@ -38,17 +38,22 @@ function setVolume(){
 }
 
 // kun soitin on valmis...
+var ready = false;
 function onPlayerReady(event) {
-//            event.target.playVideo();
+	player.addEventListener('onStateChange', function(e) {
+        if(e.data == 0){
+			adminChangeVideo('skip');
+		}
+    });
+	//event.target.playVideo();
+	ready = true;
+	refreshVideo();
     setVolume();
 }
 
-//var done = false;
-//Kun soittimen tila muuttuu...
+//index.php - Kun soittimen tila muuttuu...
 function onPlayerStateChange(event) {
-//            if (event.data == YT.PlayerState.PLAYING && !done) {
-//                
-//            }
+	console.log(player.getPlayerState());
 }
 
 // Hiljentää soittimen
@@ -70,8 +75,10 @@ function playVideo() {
 
 // Vaihtaa soittimen videon
 function changeVideo(id) {
-	console.log(id);
-    player.loadVideoById(id);
+	console.log(ready);
+	if(ready){
+		player.loadVideoById(id);		
+	}
 }
 
 // Vaihtaa soittimen äänentason
@@ -125,11 +132,6 @@ function addVideo(){
 				document.getElementById("message").innerHTML = "";
 				},5000);
 			}
-			
-			
-			
-			
-			
 		}
 	}
 	http.send(params);

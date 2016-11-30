@@ -27,7 +27,7 @@ if(isset($_POST['next'])){
 				$results->bindValue(':date',$aika);
 				$results->bindValue(':status','playing');
 				$results->bindValue(':videoId',$newvideo[0]);
-				$result = $results->execute(); //lisää
+				$result = $results->execute();
 				removeNew($newvideo[0]);
 				echo $newvideo[0];
 			}
@@ -36,7 +36,7 @@ if(isset($_POST['next'])){
 				$results->bindValue(':date',$aika);
 				$results->bindValue(':status','paused');
 				$results->bindValue(':videoId', "");
-				$result = $results->execute(); //lisää
+				$result = $results->execute();
 				echo "";
 			}
 		}
@@ -48,11 +48,21 @@ if(isset($_POST['next'])){
 				$results->bindValue(':date',$aika);
 				$results->bindValue(':status','playing');
 				$results->bindValue(':videoId', $_POST['videoid']);
-				$result = $results->execute(); //lisää
+				$result = $results->execute();
 				removeNew($_POST['videoid']);
 				echo $_POST['videoid'];
 			}
 		}
+		/* else if($_POST['next'] == 'pause'){
+			//jos pausetetaan
+				$aika = date("Y-m-d H:i:s");
+				$results = $db->prepare('UPDATE log SET date=:date, status=:status, videoid=:videoId WHERE id=1'); //tietokantahaun alustus
+				$results->bindValue(':date',$aika);
+				$results->bindValue(':status','paused');
+				$results->bindValue(':videoId', '');
+				$result = $results->execute();
+				echo 'paused';
+		} */
 	}
 	catch(Exception $e){
 		echo "db error";
