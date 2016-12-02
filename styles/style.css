@@ -293,6 +293,14 @@ ul {
 	padding: 0;
 	margin: 0;
 }
+ul.dokumentti {
+	max-height: none;
+	padding-left: 40;
+}
+ul.dokumentti > li {
+	list-style: circle;
+	margin: auto;
+}
 li {
 	list-style: none;
 }

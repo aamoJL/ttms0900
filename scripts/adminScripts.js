@@ -31,53 +31,7 @@ function newPost() {
 }
 
 
-// blog.php - Lähettää uuden blogimerkinnän tiedot addBlogpost.php:lle
-function addPost(){
-	var http = new XMLHttpRequest();
-	var url = "includes/addBlogpost.php";
-	var message = encodeURIComponent(document.getElementById("postText").value);
-	var title = encodeURIComponent(document.getElementById("postTitle").value);
-	
-	if(message == "" || title == ""){
-		alert("tyhjia kohtia!");
-		return;
-	}
-	
-	var params = "viesti="+message+"&otsikko="+title;
-	http.open("POST", url, true);
-	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-	http.onreadystatechange = function() {
-		if(http.readyState == 4 && http.status == 200) {
-			//alert(http.responseText);
-			location.reload();
-		}
-	}
-	http.send(params);
-	
-	document.getElementById("postText").innerHTML = "";
-	document.getElementById("postTitle").innerHTML = "";
-}
-
-// blog.php - lähettää poistettavan blogimerkinnän indexin removeBlogpost.php:lle
-function removePost(index){
-	var http = new XMLHttpRequest();
-	var url = "includes/removeBlogpost.php";
-	
-	var params = "index="+index;
-	
-	http.open("POST", url, true);
-
-	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-	http.onreadystatechange = function() {
-		if(http.readyState == 4 && http.status == 200) {
-			//alert(http.responseText);
-			location.reload();
-		}
-	}
-	http.send(params);
-}
 
 // index.php - Adminin videon vaihto scripti
 function adminChangeVideo(id) {
