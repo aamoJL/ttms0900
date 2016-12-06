@@ -86,7 +86,11 @@
 				<hr>
 				<h2>Itsearviot</h2>
 				<h3>Joni Laukka</h3>
-				<p>Jonin arvio</p>
+				<p>
+				Arvosana: 4<br>
+				Onnistumiset: Työ sisältää suunnitellut ominaisuudet ja toimii kuten pitääkin.<br>
+				Puutteet: -
+				</p>
 				
 				<h3>Jaakko Pöyhönen</h3>
 				<p>Jaakon arvio</p>
