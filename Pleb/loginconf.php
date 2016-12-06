@@ -154,7 +154,7 @@ public function runApplication()
         echo '<input id="login_input_password" type="password" name="user_password" required /> ';
         echo '<input type="submit"  name="login" value="Log in" />';
         echo '</form>';
-        echo '<a href="javascript:closeLogin();" id="closeLogin">Close</a>';
+        echo '<button type="button" name="cancel" onclick="javascript:closeLogin();" class="cancelbtn">Cancel</button>';
         echo '</article>';
         echo '</div>';
 
