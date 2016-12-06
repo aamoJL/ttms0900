@@ -18,6 +18,37 @@ function closeChat() {
             document.getElementById("chatButton").onclick = openChat;
         }
            
+var video = "";
+function refreshVideo(){
+	var http = new XMLHttpRequest();
+	var url = "includes/getVideo.php";
+	
+	http.open("POST", url, true);
+
+	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+	http.onreadystatechange = function() {
+		if(http.readyState == 4 && http.status == 200) {
+			var playing = http.responseText;
+			//console.log(playing);
+			if(playing == video && playing != 'paused'){
+				if(player.getPlayerState() != 1){
+					//player.playVideo();
+				}
+			}
+			else if(playing == 'paused'){
+				video = paused;
+				pauseVideo();
+			}
+			else{
+				video = playing;
+				changeVideo(video);
+			}
+		}
+	}
+	http.send();
+	setTimeout(refreshVideo, 10000);
+}
            // Päivittää soittolistan 5000ms välein
 $(document).ready(function(){
       refreshTable();

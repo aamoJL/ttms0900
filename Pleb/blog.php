@@ -6,11 +6,10 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="styles/style.css" type="text/css" rel=stylesheet>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- jquery -->
-    <?php
-if($_SESSION["user_name"] == "admin") {?>
-<script src="scripts/adminScripts.js"></script> <!-- adminin käyttämät scriptit --><?php 
-}
-?>
+
+
+<script src="scripts/adminScripts.js"></script> <!-- adminin käyttämät scriptit -->
+
 </head>
 
 <?php

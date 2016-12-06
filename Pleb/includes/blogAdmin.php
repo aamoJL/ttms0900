@@ -19,12 +19,25 @@ if($_SESSION["user_name"] == "admin") {
 				if($_FILES['kuva']['name'] != ""){
 					$imagename = date("Y-m-d--H-i-s");
 				}
+
+				if($_FILES['kuva']['type']=='image/jpeg') {
+				     $ext='.jpg';
+				}
+
+				if($_FILES['kuva']['type']=='image/pjpeg') {
+				     $ext='.jpg';
+				}
+
+				if($_FILES['kuva']['type']=='image/png') {
+				     $ext='.png';
+				}
+
 				$add = array(
 					'paivays' => $paivays,
 					'otsikko' => htmlspecialchars($_POST['otsikko']),
 					'viesti' => htmlspecialchars($_POST['viesti']),
-					'lahettaja' => "aamo",
-					'kuva' => $imagename
+					'lahettaja' => $_SESSION['user_name'],
+					'kuva' => $imagename . $ext
 				);
 				$posts[] = $add;
 				$final_data = json_encode($posts);

@@ -1,3 +1,4 @@
+// Tunnilla tehty react chatti
 var ChatHeader = React.createClass({
  // Load the initial name
   getInitialState: function() {
@@ -19,13 +20,24 @@ var ChatHeader = React.createClass({
   },
   render: function() {
     // To display the username   
+    
+       // var http = new XMLHttpRequest();
+	//var url = "includes/getUser.php";
+        //var user = "";
+
+   // http.open( "GET", url, false );
+   // http.send( null );
+       
+    //user = http.responseText;
+    //document.write(user);
     return (
-      
+
       <div className="msg-header">
-        Role: <span>Admin</span>
       </div>
       
     );
+	//$('.msg-header').html();
+ 
   }
 });
 

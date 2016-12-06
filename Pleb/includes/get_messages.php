@@ -1,6 +1,5 @@
 <?php
 
-// SEMITOIMIVAA pitäisi olla, jos tietokantasi vastaa ohjeistettua
 
 require_once '../reactconf.php';
 require_once __DBCONFIG_PATH . '/Chat.php';
@@ -31,18 +30,6 @@ if (!empty($messages)) {
   echo '<span style="margin-left: 25px;">No chat messages available!</span>';
 }
 
-/*
-ob_start();
-echo "get_messages:\n";
-echo $response;
-$data = ob_get_contents();
-$fp = fopen("debug.txt", "w");
-fwrite ($fp, $data);
-fclose($fp);
-ob_end_clean();
-*/
-
-// Toimii testattu:
 header('Content-type: application/json');
 echo $response;
 ?>

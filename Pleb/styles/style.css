@@ -49,7 +49,7 @@ visibility: hidden;
     border-radius: 3px;
     padding: 15px 15px 15px;
     margin: 10px auto;
-    border: 1px solid #ddd;
+
 }
 
 .chat-container {
@@ -69,7 +69,7 @@ visibility: hidden;
 }
 
 .msg-row-container {
-  border-bottom: 1px dashed lightgreen;
+  border-bottom: 1px solid pink;
 }
 
 .msg-row {

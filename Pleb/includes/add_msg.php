@@ -1,6 +1,5 @@
 <?php
-
-// SEMITOIMIVAA pitäisi olla, jos tietokantasi vastaa ohjeistettua
+session_start();
 
 require_once '../reactconf.php';
 require_once __DBCONFIG_PATH . '/Chat.php';
@@ -10,7 +9,11 @@ if (isset($_POST['msg'])) {
   
   //$userId = (int) $_SESSION['user_id'];
 
-  $userId = 2;
+  $userId = 3;
+  if ($_SESSION['user_name'] == "admin")
+  {
+    $userId = 2;
+  }
   $msg = strip_tags(($_POST['msg']));
  
   $chat = new Chat();

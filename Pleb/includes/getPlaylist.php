@@ -16,7 +16,7 @@ echo "<table>";
 if($_SESSION["user_name"] == "admin") {
 	//soittolistataulukon tulostus
 	while($row = $result->fetchArray()) {
-		echo	"<tr><td><img class='thumbnail' src='https://i.ytimg.com/vi/".$row[3]."/mqdefault.jpg' onclick=changeVideo('".$row[3]."')><td>
+		echo	"<tr><td><img class='thumbnail' src='https://i.ytimg.com/vi/".$row[3]."/mqdefault.jpg' onclick=adminChangeVideo('".$row[3]."')><td>
 					<ul>
 						<li><strong>".$row[1]."</strong></li>
 						<li>".$row[2]."</li>
@@ -29,7 +29,7 @@ if($_SESSION["user_name"] == "admin") {
 	else{
 //soittolistataulukon tulostus
 	while($row = $result->fetchArray()) {
-		echo	"<tr><td><img class='thumbnail' src='https://i.ytimg.com/vi/".$row[3]."/mqdefault.jpg' onclick=changeVideo('".$row[3]."')><td>
+		echo	"<tr><td><img class='thumbnail' src='https://i.ytimg.com/vi/".$row[3]."/mqdefault.jpg'><td>
 					<ul>
 						<li><strong>".$row[1]."</strong></li>
 						<li>".$row[2]."</li>

@@ -10,6 +10,15 @@ if(isset($_POST['videoTitle']) && isset($_POST['channelTitle']) && isset($_POST[
 	try{
 	$db = new SQLite3('/var/Databases/testdb.db'); //tietokanta
 
+	//jos video on jo jonossa:
+	$videos = $db->prepare("SELECT YTid FROM Video WHERE YTid=:videoid AND tila='jono' LIMIT 1;");
+	$videos->bindValue(':videoid',$_POST['videoId']);
+	$video = $videos->execute(); //soitetuthaku
+	$video = $video->fetchArray();
+	if($video[0] != ""){
+		exit("listalla");
+	}
+
 	$results = $db->prepare('INSERT INTO Video (nimi,kanava,YTid,lisaaja,lisatty) VALUES (:videoTitle, :channelTitle, :videoId, :addedBy, :Date)'); //... WHERE id = :id' //tietokantahaun alustus
 	$results->bindValue(':videoTitle',$_POST['videoTitle']);
 	$results->bindValue(':channelTitle',$_POST['channelTitle']);
