@@ -30,19 +30,41 @@ a:hover {
     border-color: black;
 }
 #popupbox{
-margin: 0; 
-margin-left: 40%; 
-margin-right: 40%;
+
+margin-left: 30%; 
+margin-right: 30%;
 margin-top: 50px; 
 padding-top: 10px; 
 width: 20%; 
-height: 150px; 
+height: 40px; 
 position: absolute; 
-background: #FBFBF0; 
-border: solid #000000 2px; 
+background: #ff9ec6; 
 z-index: 9; 
 font-family: arial; 
 visibility: hidden; 
+
+}
+article[class=login]
+{
+    padding: 16px;
+}
+
+input[id=login_input_username], input[id=login_input_password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+input[name=login], button[name=cancel]{
+    background-color: #ff9ec6;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
 }
 /* ------------- chatti paskaa --------------*/
 #mastercontainer {
