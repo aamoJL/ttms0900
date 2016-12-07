@@ -18,7 +18,7 @@
 				</p>
                 <hr>
                 <h2>Tehtävän kuvaus</h2>
-				<p><a href="https://github.com/aamoJL/ttms0900">Suunnitelma githubissa.</a><br>
+				<p><a href="https://github.com/aamoJL/ttms0900" class=dokumentti>Suunnitelma githubissa.</a><br>
 					<ul class=dokumentti>
 					<li>Adminin johdolla toimiva automaattinen videosoittolista, johon voi lisätä kuka vain uusia videoita</li>
 					<li>kaikille sama soittolista, kaikilla soi adminin video.</li>
