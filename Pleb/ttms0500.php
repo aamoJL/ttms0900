@@ -12,8 +12,9 @@
 				<h2>Kurssi: TTMS0500
 				<h3>Tekijät: Joni Laukka, Jaakko Pöyhönen - 6.12.2016
                 <hr></hr>
-				<p>Lähdekoodit: Linkki tähän<br>
-				Zip-paketti: linkki tähän
+				<p>Lähdekoodit: <a href="http://185.14.185.175/ttms0900/Pleb/syntax.php" class=dokumentti>pleb</a> <a href="http://185.14.185.175/ttms0900/Pleb/includes/syntax.php" class=dokumentti>includes</a>
+					<a href="http://185.14.185.175/ttms0900/react/syntax.php" class=dokumentti>chatconf</a><br>
+				<a href="http://185.14.185.175/ttms0900/pleb.zip" class=dokumentti>Zip-paketti</a>
 				</p>
                 <hr>
                 <h2>Tehtävän kuvaus</h2>
