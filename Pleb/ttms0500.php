@@ -1,7 +1,6 @@
 <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- jquery -->
     <link href="styles/style.css" type="text/css" rel=stylesheet>
 </head>
 
@@ -11,7 +10,7 @@
             <article class="dokumentti">
                 <h1 class="dokumenttiotsikko">Harjoitustyö: Pleblist</h1>
 				<h2>Kurssi: TTMS0500
-				<h3>Tekijät: Joni Laukka, Jaakko Pöyhönen - XX.12.2016
+				<h3>Tekijät: Joni Laukka, Jaakko Pöyhönen - 6.12.2016
                 <hr></hr>
 				<p>Lähdekoodit: Linkki tähän<br>
 				Zip-paketti: linkki tähän
@@ -112,7 +111,11 @@
 				<hr>
 				<h2>Itsearviot</h2>
 				<h3>Joni Laukka</h3>
-				<p>Jonin arvio 5/5</p>
+				<p>TTMS0500 Jonin päiväkirja: http://student.labranet.jamk.fi/~H9031/ttms0500/paivakirja-ttms0500<br>
+				Arvosana: 3<br>
+Onnistumiset: Työ sisältää kaikki suunnitellut ominaisuudet ja toimii suunnitelman mukaisesti.<br>
+Puutteet: Näkymien muuttaminen käyttäjävalinnoilla vähäistä.
+				</p>
 				
 				<h3>Jaakko Pöyhönen</h3>
 				<p>Jaakon arvio</p>
