@@ -26,6 +26,19 @@ a {
     padding-bottom: 3px;
     border-top: 3px solid transparent;
 }
+a.dokumentti
+{
+    position: relative;
+    display: inline;
+    font-weight: normal;
+    font-size: 16;
+    color: blue;
+    text-decoration: underline;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    border-top: none;
+}
 a:hover {
     border-color: black;
 }
