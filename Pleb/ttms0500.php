@@ -133,7 +133,7 @@ Puutteet: Näkymien muuttaminen käyttäjävalinnoilla vähäistä.
 				
 				<h3>Jaakko Pöyhönen</h3>
 				<p>Arvosana: 1.5<br>
-					Onnistumiset: Kirjautuminen toimii.<br>
+					Onnistumiset: Kirjautumis lomake. Adminin napit on normaalilta käyttäjältä piilossa.<br>
 					Puutteet: Chat on melkein suoraan tuntiesimerkistä.</p>
             </article>
     </main>
