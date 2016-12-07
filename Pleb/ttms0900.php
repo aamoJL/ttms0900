@@ -116,7 +116,7 @@
 				</p>
 				
 				<h3>Jaakko Pöyhönen</h3>
-				<p>Arvosana: 1.5<br>
+				<p>Arvosana: 1.75<br>
 				Onnistumiset: Kirjautuminen toimii ja vaan admin saa tehdä adminille tarkoitetut jutut.<br>
 				Puutteet: Voisi olla myös muun tasoisia käyttäjiä, jotka voi chattailla omalla nimimerkillään.</p>
             </article>
