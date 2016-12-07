@@ -101,6 +101,7 @@
 		  			<h3>loginconf.php</h3>
 					<ul class=dokumentti>
 						<li>Nav.php lataa loginconf.php:n.</li>
+						<li>Sisäänkirjautuminen adminille. Login form samassa tiedostossa.</li>
 						</ul>
 		    			<h4>navscripts.js toiminta:</h4>
 						<ul class=dokumentti>
