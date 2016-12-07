@@ -98,6 +98,19 @@
 								<li>painettaessa lomakkeen "add"-nappia, lomakkeen tiedot (otsikko,viesti,mahdollinen kuva) lähetetään sivuun liitettyyn includes/blogAdmin.php:hen.</li>
 							</ul>
 						</ul>
+		  			<h3>loginconf.php</h3>
+					<ul class=dokumentti>
+						<li>Nav.php lataa loginconf.php:n.</li>
+						</ul>
+		    			<h4>navscripts.js toiminta:</h4>
+						<ul class=dokumentti>
+						<li>Login -painiketta painaessa avaa login formin.</li>
+						<li>Sisään kirjauduttua muuntaa Login -painikkeen Logout -painikkeeksi.</li>
+					    </ul>
+		  			<h3>react-chat.js</h3>
+					<ul class=dokumentti>
+						<li>Luo chatin chat tabiin.</li>
+						</ul>
 				</p>
 				<hr>
                 <h2>Ajan käyttö</h2>
@@ -118,7 +131,9 @@ Puutteet: Näkymien muuttaminen käyttäjävalinnoilla vähäistä.
 				</p>
 				
 				<h3>Jaakko Pöyhönen</h3>
-				<p>Jaakon arvio</p>
+				<p>Arvosana: 1.5<br>
+					Onnistumiset: Kirjautuminen toimii.<br>
+					Puutteet: Chat on melkein suoraan tuntiesimerkistä.</p>
             </article>
     </main>
 <?php include_once("includes/footer.php"); ?>
