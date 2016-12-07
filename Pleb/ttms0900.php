@@ -73,7 +73,29 @@
 				<ul class=dokumentti>
 					<li>palvelin vaihtaa databases/testdb.db -tietokannasta annetun id:n tilaksi 'poistettu'.</li>
 				</ul>
-				</p>
+		    		<h3>loginconf.php</h3>
+				<ul class=dokumentti>
+					<li>Kirjautuminen admin käyttäjälle.</li>
+					<li>Kirjautumistoimenpiteet ja käyttäjän validointiin koodi lainatu tästä <a href="https://github.com/panique/php-login-one-file">php-login skriptistä.</a></li>
+					<li>Käyttäjätiedot sqlite tietokannassa.</li>
+		    		</ul>
+		   		 <h3>Chat.php</h3>
+		    		<br>Yhteys sqlite tietokantaan. Tietokanta kysely funktiot.
+		    		<h4>reactconf.php</h4>
+					<br>Yhteys Chat.php:hen
+		   		 <h4>add_msg.php</h4>
+		    			<ul class=dokumentti>
+						<li>Lähettää chat ruudun viestin Chat.php:n addMessage funktiolle.</li>
+						<li>addMessage kirjoittaa viestin tietokantaan.</li>
+						<li>Palauttaa päivitetyn chat keskustelun react-chat.js:lle</li>
+		    		</ul>
+		   		 <h4>get_messages.php</h4>
+		  			<ul class=dokumentti>
+						<li>Pyytää chat keskustelun Chat.php:n getMessages funktiolta, joka hakee ne tietokannasta.</li>
+						<li>Palauttaa päivitetyn chat keskustelun react-chat.js:lle</li>
+		    		</ul>  		
+		    
+			</p>
 				<hr>
                 <h2>Ajan käyttö</h2>
 				<p>
@@ -93,7 +115,9 @@
 				</p>
 				
 				<h3>Jaakko Pöyhönen</h3>
-				<p>Jaakon arvio</p>
+				<p>Arvosana: 1.5<br>
+				Onnistumiset: Kirjautuminen toimii ja vaan admin saa tehdä adminille tarkoitetut jutut.<br>
+				Puutteet: Voisi olla myös muun tasoisia käyttäjiä, jotka voi chattailla omalla nimimerkillään.</p>
             </article>
     </main>
 <?php include_once("includes/footer.php"); ?>
