@@ -80,9 +80,9 @@
 					<li>Käyttäjätiedot sqlite tietokannassa.</li>
 		    		</ul>
 		   		 <h3>Chat.php</h3>
-		    		<br>Yhteys sqlite tietokantaan. Tietokanta kysely funktiot.
+		    Yhteys sqlite tietokantaan. Tietokanta kysely funktiot.
 		    		<h4>reactconf.php</h4>
-					<br>Yhteys Chat.php:hen
+		    Yhteys Chat.php:hen
 		   		 <h4>add_msg.php</h4>
 		    			<ul class=dokumentti>
 						<li>Lähettää chat ruudun viestin Chat.php:n addMessage funktiolle.</li>
