@@ -76,7 +76,7 @@
 		    		<h3>loginconf.php</h3>
 				<ul class=dokumentti>
 					<li>Kirjautuminen admin käyttäjälle.</li>
-					<li>Kirjautumistoimenpiteet ja käyttäjän validointiin koodi lainatu tästä <a href="https://github.com/panique/php-login-one-file">php-login skriptistä.</a></li>
+					<li>Kirjautumistoimenpiteet ja käyttäjän validointiin koodi lainatu tästä <a href="https://github.com/panique/php-login-one-file" style="font-size: 2em;text-decoration:none;">php-login skriptistä.</a></li>
 					<li>Käyttäjätiedot sqlite tietokannassa.</li>
 		    		</ul>
 		   		 <h3>Chat.php</h3>
